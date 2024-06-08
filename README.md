@@ -7,7 +7,7 @@
 # My Setup configuration
 Nitro 5 (AN515-58-55E6)
 - Processor : Intel® Core™ i5-12500H processor (18MB cache, up to 4.50Ghz) 45W TDP
-- OS : Windows 11 IoT LTSC
+- OS : Windows 11 IoT LTSC https://massgrave.dev/windows_ltsc_links
 - Memory : 2*8GB DDR4
 - Storage : 512GB SSD NVMe
 - Inch, Res, Ratio, Panel : 15.6" FHD LED IPS 144Hz
