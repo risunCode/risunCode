@@ -15,6 +15,8 @@ Nitro 5 (AN515-58-55E6)
 - https://store.acer.com/en-id/nitro-5-an-515-58-i5-nh-qfhsn-002
 - ![config](https://github.com/risunCode/risunCode/assets/155391863/c96559c4-30ba-4841-a1c0-b0fc8869c1cf)
 
+![image](https://github.com/risunCode/risunCode/assets/155391863/507d0268-a355-4eb1-af65-3a56bed8f5e2)
+
 
 
 <!---
