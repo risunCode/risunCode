@@ -13,7 +13,7 @@ Nitro 5 (AN515-58-55E6)
 - Inch, Res, Ratio, Panel : 15.6" FHD LED IPS 144Hz
 - Graphics : NVIDIA® GeForce® RTX 3050 with 4GB of GDDR6 (95W)
 - https://store.acer.com/en-id/nitro-5-an-515-58-i5-nh-qfhsn-002
-- ![config](https://github.com/risunCode/risunCode/assets/155391863/c96559c4-30ba-4841-a1c0-b0fc8869c1cf)
+![config](https://github.com/risunCode/risunCode/assets/155391863/c96559c4-30ba-4841-a1c0-b0fc8869c1cf)
 
 <!---
 DindaLuka/DindaLuka is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
