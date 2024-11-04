@@ -10,13 +10,11 @@
 - OS : Windows 11 IoT LTSC https://massgrave.dev/windows_ltsc_links
 - Memory : 2*8GB DDR4 3200MT/s
 - Storage : 512GB SSD NVMe (Micron)
-- Dual NVME + SATA
 - Inch, Res, Ratio, Panel : 15.6" FHD LED IPS 144Hz
 
 # GPU
-- Intel Iris Xe 8GB (integrated) 45W TDP
+- Intel Iris Xe 1GB (integrated) 45W TDP
 - Graphics : NVIDIA® GeForce® RTX 3050 with 4GB of GDDR6 (95W TGP)
-- https://store.acer.com/en-id/nitro-5-an-515-58-i5-nh-qfhsn-002
 
 # Monitor 
 [Xiaomi Gaming Monitor G27i](https://www.mi.com/global/product/xiaomi-gaming-monitor-g27i/) 165Hz FHD Resolution
