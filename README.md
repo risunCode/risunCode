@@ -3,10 +3,12 @@
 ### Risunturu Github
 
 # My Setup configuration
-Acer Nitro 5 (AN515-58-55E6)
+
+### Laptop Specs
+[Acer Nitro 5 (AN515-58-55E6)](https://store.acer.com/en-id/nitro-5-an-515-58-i5-nh-qfhsn-002)
 - Processor : Intel® Core™ i5-12500H processor (18MB cache, up to 4.50Ghz) 
 - OS : Windows 11 IoT LTSC https://massgrave.dev/windows_ltsc_links
-- Memory : 2*8GB DDR4 3200Mhz
+- Memory : 2*8GB DDR4 3200MT/s
 - Storage : 512GB SSD NVMe (Micron)
 - Dual NVME + SATA
 - Inch, Res, Ratio, Panel : 15.6" FHD LED IPS 144Hz
@@ -15,8 +17,12 @@ Acer Nitro 5 (AN515-58-55E6)
 - Intel Iris Xe 8GB (integrated) 45W TDP
 - Graphics : NVIDIA® GeForce® RTX 3050 with 4GB of GDDR6 (95W TGP)
 - https://store.acer.com/en-id/nitro-5-an-515-58-i5-nh-qfhsn-002
-![config](https://github.com/risunCode/risunCode/assets/155391863/c96559c4-30ba-4841-a1c0-b0fc8869c1cf)
 
+# Monitor 
+[Xiaomi Gaming Monitor G27i](https://www.mi.com/global/product/xiaomi-gaming-monitor-g27i/) 165Hz FHD Resolution
+- Rated power 36W
+- HDR10*
+- 99% sRGB color gamut
 <!---
 DindaLuka/DindaLuka is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
