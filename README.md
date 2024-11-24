@@ -23,7 +23,11 @@
 [Xiaomi Gaming Monitor G27i](https://www.mi.com/global/product/xiaomi-gaming-monitor-g27i/) 165Hz FHD Resolution
 - Rated power 36W
 - 99% sRGB color gamut
+
+![photo_2024-11-24_19-26-30](https://github.com/user-attachments/assets/831b0b44-2207-4cd7-ac55-6f10cabf652f)
+
 <!---
+Last edited, 24 Nov 2024
 DindaLuka/DindaLuka is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
