@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @risunCode
-- @risunturu
-### Risunturu Github
+### risunCode Github
 
 # My Setup configuration
 [Acer Nitro 5 (AN515-58-55E6)](https://store.acer.com/en-id/nitro-5-an-515-58-i5-nh-qfhsn-002)
