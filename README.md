@@ -13,7 +13,8 @@
 - Adaptor Power 180W
 
 # Quick Jump
-- [Bahan Install Ulang Plus](https://github.com/risunCode/BAHAN-INSTALL-ULANG-PLUS)
+- [Bahan Install Ulang Windows](https://github.com/risunCode/Windows_Reinstall)
+- [Bahan software untuk servis hp [Aftersales TOOL]](https://github.com/risunCode/SP_Aftersales_tool)
 <!---
 Last edited, 24 Nov 2024
 DindaLuka/DindaLuka is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
