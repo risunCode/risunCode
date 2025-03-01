@@ -14,7 +14,7 @@
 - Adaptor Power 180W
 
 # Quick Jump
-- [Bahan Install Ulang Plus](https://github.com/risunCode/Windowski)
+- [Bahan Install Ulang Plus](https://github.com/risunCode/BAHAN-INSTALL-ULANG-PLUS)
 <!---
 Last edited, 24 Nov 2024
 DindaLuka/DindaLuka is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
