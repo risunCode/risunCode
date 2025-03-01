@@ -12,7 +12,7 @@
 - Graphics : NVIDIA® GeForce® RTX 3050 with 4GB of GDDR6 (95W TGP)
 - Adaptor Power 180W
 
-# Quick Jump
+# Quick Jump [Links]
 - [Bahan Install Ulang Windows](https://github.com/risunCode/Windows_Reinstall)
 - [Bahan software untuk servis hp [Aftersales TOOL]](https://github.com/risunCode/SP_Aftersales_tool)
 <!---
