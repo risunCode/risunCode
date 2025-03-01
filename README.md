@@ -13,6 +13,8 @@
 - Graphics : NVIDIA® GeForce® RTX 3050 with 4GB of GDDR6 (95W TGP)
 - Adaptor Power 180W
 
+# Quick Jump
+- [Bahan Install Ulang Plus](https://github.com/risunCode/Windowski)
 <!---
 Last edited, 24 Nov 2024
 DindaLuka/DindaLuka is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
