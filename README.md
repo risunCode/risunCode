@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @risunCode
-### risunCode Github
+## risunCode Github
 
-# My Setup configuration
+### My Setup configuration
 [Acer Nitro 5 (AN515-58-55E6)](https://store.acer.com/en-id/nitro-5-an-515-58-i5-nh-qfhsn-002)
 <!---- Processor : Intel® Core™ i5-12500H processor (18MB cache, up to 4.50Ghz) 
 - OS : [Windows 11 Pro, Build 26100.3194)
