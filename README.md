@@ -16,6 +16,13 @@
 ## [Windows-Portal Any tools For your needs!](https://github.com/risunCode/Windows-Portal)
 ## [Bahan Software untuk perbaikan SmartPhone [AFTERSALES TOOL]](https://github.com/risunCode/Phone_AfterSalesTool)
 <!---
+sunta
+risun code
+code risun
+risun
+risuncode
+kode risun
+risun code
 Last edited, 24 Nov 2024
 DindaLuka/DindaLuka is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
