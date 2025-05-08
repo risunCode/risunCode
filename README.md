@@ -13,8 +13,8 @@
 - Adaptor Power 180W--->
 
 # Quick Jump [Links]
-## [Windows-Portal Any tools For your needs!](https://github.com/risunCode/winportal.github.io)
-## [Bahan Software untuk perbaikan SmartPhone [AFTERSALES TOOL]](https://github.com/risunCode/Phone_AfterSalesTool)
+## [WinPortal AnyTool and software foy your needs!](https://github.com/risunCode/winportal.github.io)
+## [Bahan Software untuk SmartPhone [AFTERSALES TOOL]](https://github.com/risunCode/Phone_AfterSalesTool)
 <!---
 sunta
 risun code
