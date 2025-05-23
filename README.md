@@ -5,7 +5,7 @@
 <p align="left">
 </p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=risuncode&show_icons=true&locale=en" alt="risuncode" /></p>
+![](https://github-readme-stats.vercel.app/api?username=risuncode&theme=neon&hide_border=false&include_all_commits=false&count_private=false)<br/>
 <!-- <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=risuncode&" alt="risuncode" /></p> -->
 
 ### 💻 Tech Stack:
