@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm @risunCode</h1>
-<h3 align="center">Hanya seorang pelajar mandiri, Imagine and make it happen.</h3>
+<h3 align="center">Hanya seorang pelajar mandiri, My motto is: Imagine and make it happen.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=risuncode&label=Profile%20views&color=0e75b6&style=flat" alt="risuncode" /> </p>
 <p align="left">
