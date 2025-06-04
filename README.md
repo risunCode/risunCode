@@ -14,6 +14,6 @@
 ### Quick jump 
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
 ---
-## [Phone Aftersales Tool, Program untuk perbaikan HP mandiri](https://github.com/risunCode/Phone_AfterSalesTool)
+## [Phone Aftersales Tool, Program untuk perbaikan HP mandiri](https://github.com/risunCode/SmartPhone_Tools)
 
 
