@@ -4,6 +4,6 @@
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
 
 
-[## risunCode Docs](https://risuncode.github.io/risunCode/)
+## [risunCode Docs](https://risuncode.github.io/risunCode/)
 - A simple documentation page using docsify!
 
