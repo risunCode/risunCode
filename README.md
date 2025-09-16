@@ -5,6 +5,4 @@
 - Windows tips and tricks collection, including software and scripts!
 
 
-## [risunCode Docs](https://risuncode.github.io/risunCode/)
-- A simple documentation page using docsify!
-
+<!-- << wtf is docsify, github readme is alr the docs 🗿>> -->
