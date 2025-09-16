@@ -3,9 +3,7 @@
 ### Quick jump 
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
 - Windows tips and tricks collection, including software and scripts!
-- Windows Sripts
-  : Windows Update Delay (HOT!)
-  : and more
+- Windows Sripts, including Windows update delay 2199 (HOT)
 - Ghost Toolbox
 
 <!-- << wtf is docsify, github readme is alr the docs 🗿>> -->
