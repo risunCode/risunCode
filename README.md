@@ -1,7 +1,6 @@
-<h1 align="center">Hi 👋, I'm @risunCode</h1> 
+Selamat datang di risunCode Docs.
 
-### Quick jump 
-## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
+Pilih dokumentasi:
 
-
-## risunCode Docs [not yet ready, dont expect anything]
+- [Windows Portal](sub-docs/winPortal.md)
+- [risunCode Extension](sub-docs/risunCode_Extension.md)
