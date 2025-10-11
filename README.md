@@ -1,4 +1,5 @@
 <h1 align="center">Hi 👋, I'm @risunCode</h1> 
+![risuncode](https://github.com/user-attachments/assets/8a36d4c3-018e-4108-a7fd-0f12fadd5812)
 
 ### Quick jump 
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
