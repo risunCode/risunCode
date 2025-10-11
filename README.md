@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm @risunCode</h1> 
-![risuncode](https://github.com/user-attachments/assets/8a36d4c3-018e-4108-a7fd-0f12fadd5812)
+<h1 align="center">Hi 👋, I'm @risunCode</h1>  
+<img width="960" height="540" alt="static" src="https://github.com/user-attachments/assets/46dff46e-e77e-4460-a64d-a18adf15efed" />
 
 ### Quick jump 
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
