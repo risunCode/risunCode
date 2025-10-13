@@ -8,10 +8,6 @@
 - Windows Sripts, including Windows update delay 2199 (HOT) 
 
 
-### [Wimbuilder, edit inject, integrates and cut off bloatware with ease](https://github.com/risunCode/WimBuilder)
-- inspired from tiny11 builder
-- Windows 10/11 Consumer/LTSC is supported, Appx Integration and Registry Tweaks.
-- working up to 25H2 (last tested october 2025)
-- Built for daily usage
+ 
 
 <!-- << wtf is docsify, github readme is alr the docs 🗿>> -->
