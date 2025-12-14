@@ -6,11 +6,11 @@
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
 - Windows tips and tricks collection, including software and scripts! 
  
-## [XT-Social-Suite, Free Social Media downloader (no API/no BS)](https://github.com/risunCode/XT-Social-Suite)
+### [XT-Social-Suite, Free Social Media downloader (no API/no BS)](https://github.com/risunCode/XT-Social-Suite)
 - Support, FB/IG, Twitter (x), TikTok
 - Android native app coming soon.
-- Visit > xt-social-suite.vercel.app
+- Visit > https://xt-social-suite.vercel.app/
 
-## [SurfManager, Easily Manage multiple IDE Account, Resets, Backup and restore!](https://github.com/risunCode/SurfManager)
+### [SurfManager, Easily Manage multiple IDE Account, Resets, Backup and restore!](https://github.com/risunCode/SurfManager)
 - Cursor, Windsurf, and other are supported (VS-Code Based)
 <!-- << wtf is docsify, github readme is alr the docs 🗿>> -->
