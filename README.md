@@ -13,4 +13,7 @@
 
 ### [SurfManager, Easily Manage multiple IDE Account, Resets, Backup and restore!](https://github.com/risunCode/SurfManager)
 - Cursor, Windsurf, and other are supported (VS-Code Based)
+- visit > https://risuncode.github.io/SurfManager/
+
+
 <!-- << wtf is docsify, github readme is alr the docs 🗿>> -->
