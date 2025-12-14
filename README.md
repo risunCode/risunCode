@@ -9,6 +9,7 @@
 ## [XT-Social-Suite, Free Social Media downloader (no API/no BS)](https://github.com/risunCode/XT-Social-Suite)
 - Support, FB/IG, Twitter (x), TikTok
 - Android native app coming soon.
+- Visit > xt-social-suite.vercel.app
 
 ## [SurfManager, Easily Manage multiple IDE Account, Resets, Backup and restore!](https://github.com/risunCode/SurfManager)
 - Cursor, Windsurf, and other are supported (VS-Code Based)
