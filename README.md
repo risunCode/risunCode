@@ -6,7 +6,7 @@
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
 - Windows tips and tricks collection, including software and scripts! 
  
-### [XTFetch, Free Social Media downloader (no API/no BS)](https://github.com/risunCode/XTFetch)
+### [XTFetch, Free Social Media downloader (no API/no BS)](https://github.com/risunCode/XTFetchs)
 - Support, FB/IG, Twitter (x), TikTok
 - Android native app coming soon.
 - Visit > https://xt-fetch.vercel.app/
