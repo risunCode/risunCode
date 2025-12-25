@@ -6,10 +6,11 @@
 ## [WinPortal, useful program for your compiyutah!](https://github.com/risunCode/WinPortal)
 - Windows tips and tricks collection, including software and scripts! 
  
-### [XTFetch, Free Social Media downloader (no API/no BS)](https://github.com/risunCode/XTFetchs)
+### [DownAria, Free Social Media downloader (Easy use, no BS)](https://github.com/risunCode/XTFetchs)
 - Support, FB/IG, Twitter (x), TikTok
-- Android native app coming soon.
-- Visit > https://xt-fetch.vercel.app/
+- Android native app coming soon. (PWA ready anyway haha)
+- Telegram bot: https://t.me/downariaxt_bot
+- Visit > https://downaria.vercel.app/
 
 ### [SurfManager, Easily Manage multiple IDE Account, Resets, Backup and restore!](https://github.com/risunCode/SurfManager)
 - Cursor, Windsurf, and other are supported (VS-Code Based)
