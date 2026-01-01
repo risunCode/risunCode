@@ -10,7 +10,7 @@
 - Reset or backups configs for Cursor, Windsurf, and other are supported (VS-Code Based)
 - visit > https://risuncode.github.io/SurfManager/
 
-### [DownAria, Free Social Media downloader (Easy use, no BS)](https://github.com/risunCode/XTFetchs)
+### [DownAria, Free Social Media downloader (Easy use, no BS)](https://github.com/risunCode/Downaria)
 - Support, FB/IG, Twitter (x), TikTok
 - Android native app coming soon. (PWA ready anyway haha)
 - Telegram bot: https://t.me/downariaxt_bot
