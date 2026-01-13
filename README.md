@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm @risunCode</h1>  
-![mikauwu](https://github.com/user-attachments/assets/96619e8d-37e7-4c82-93b8-4facbf91ce60)
+![mikauwu](https://raw.githubusercontent.com/risuncode/risuncode/main/mikasamael-risuncode.jpeg)
 
 
 
