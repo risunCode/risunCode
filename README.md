@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm @risunCode</h1>  
-![mikauwu](https://raw.githubusercontent.com/risuncode/risuncode/main/mikasamael-risuncode.jpeg)
 
+<img width="1179" height="1572" alt="mikasamael-risuncode" src="https://github.com/user-attachments/assets/f88babc7-3475-4e61-9a25-0cea8bc2ece0" />
 
 
 ### Quick jump 
