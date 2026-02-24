@@ -8,14 +8,12 @@
 ### MailGan (Email alias)
 https://risuncode.github.io/MailGan/
 
-#### (MAINTENANCE) [DownAria, Free Social Media downloader (Easy use, no BS)](https://github.com/risunCode/Downaria)
+#### (Service is now back online!) [DownAria, Free Social Media downloader (Easy use, no BS)](https://github.com/risunCode/Downaria)
 - Support, FB/IG, Twitter (x), TikTok
 - Android native app coming soon. (PWA ready anyway haha)
 - Telegram bot: https://t.me/downariaxt_bot
 - Visit > https://downaria.vercel.app/
 
- ## Advice
- - Codex GPT is shit. (you might already figure it out :D)
- - its good for review and planning, but not implement
+
 
 <!-- << wtf is docsify, github readme is alr the docs 🗿>> -->
