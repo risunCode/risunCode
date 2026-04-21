@@ -8,7 +8,7 @@
 ### MailGan (Email alias)
 https://risuncode.github.io/MailGan/
 
-#### (Service is offkine!) [DownAria, Free Social Media downloader (Easy use, no BS)](https://github.com/risunCode/Downaria)
+#### (Service is Online!) [DownAria, Free Social Media downloader (Easy use, no BS)](https://github.com/risunCode/Downaria)
 - Support, FB/IG, Twitter (x), TikTok
 - Android native app coming soon. (PWA ready anyway haha)
 - Telegram bot: https://t.me/downariaxt_bot
