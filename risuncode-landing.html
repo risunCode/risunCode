@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>risunCode — tools that just work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFAF7;
+  --ink:#16181D;
+  --muted:#5C616C;
+  --line:#E4E3DC;
+  --card:#FFFFFF;
+  --cobalt:#2B4EFF;
+  --cobalt-soft:#EEF1FF;
+  --amber:#FFC533;
+  --live-bg:#E7F7EC; --live-fg:#0A7B34;
+  --nav-bg:rgba(250,250,247,.85);
+  --shadow:rgba(22,24,29,.08);
+  --radius:14px;
+}
+html[data-theme="dark"]{
+  --paper:#101216;
+  --ink:#F2F3F5;
+  --muted:#9AA0AC;
+  --line:#262A33;
+  --card:#181B21;
+  --cobalt:#6C86FF;
+  --cobalt-soft:#1E2540;
+  --amber:#FFC533;
+  --live-bg:#12301C; --live-fg:#4ADE80;
+  --nav-bg:rgba(16,18,22,.85);
+  --shadow:rgba(0,0,0,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'IBM Plex Sans',sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background .35s ease, color .35s ease;
+}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+/* ---------- scroll reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s cubic-bezier(.22,.9,.3,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease, transform .7s cubic-bezier(.22,.9,.3,1)}
+.reveal-left.in{opacity:1;transform:translateX(0)}
+@media (prefers-reduced-motion: reduce){
+  .reveal,.reveal-left{opacity:1;transform:none;transition:none}
+}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--nav-bg);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  transition:background .35s ease;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem}
+.logo span{color:var(--cobalt)}
+.nav-links{display:flex;gap:18px;align-items:center;font-size:.9rem;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links .gh{
+  color:var(--ink);border:1.5px solid var(--ink);
+  padding:5px 14px;border-radius:999px;font-weight:500;
+  transition:all .18s ease;
+}
+.nav-links .gh:hover{background:var(--ink);color:var(--paper)}
+.theme-btn{
+  width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);
+  background:var(--card);cursor:pointer;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .3s ease, border-color .2s ease;
+}
+.theme-btn:hover{transform:rotate(24deg) scale(1.08);border-color:var(--cobalt)}
+.theme-btn:active{transform:rotate(180deg) scale(.9)}
+
+/* ---------- hero ---------- */
+header{padding:96px 0 72px;border-bottom:1px solid var(--line);overflow:hidden}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:.8rem;
+  color:var(--cobalt);letter-spacing:.06em;margin-bottom:18px;
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--cobalt);display:inline-block}
+h1{
+  font-family:'Sora',sans-serif;font-weight:800;
+  font-size:clamp(2.4rem,6vw,4.2rem);
+  line-height:1.08;letter-spacing:-.02em;
+  max-width:15ch;
+}
+h1 .word{display:inline-block;opacity:0;transform:translateY(.6em);animation:rise .7s cubic-bezier(.22,.9,.3,1) forwards}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+h1 em{
+  font-style:normal;color:var(--cobalt);position:relative;white-space:nowrap;
+}
+h1 em::after{
+  content:"";position:absolute;left:0;bottom:.08em;height:.28em;width:0;
+  background:var(--amber);z-index:-1;opacity:.55;border-radius:2px;
+  animation:highlight .6s ease 1.2s forwards;
+}
+@keyframes highlight{to{width:100%}}
+@media (prefers-reduced-motion: reduce){
+  h1 .word{opacity:1;transform:none;animation:none}
+  h1 em::after{width:100%;animation:none}
+}
+.sub{margin-top:22px;max-width:52ch;color:var(--muted);font-size:1.05rem}
+.hero-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:999px;font-weight:500;font-size:.95rem;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--cobalt);color:#fff;box-shadow:0 4px 14px rgba(43,78,255,.28)}
+.btn-primary:hover{box-shadow:0 8px 22px rgba(43,78,255,.4)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:var(--card)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* alias ticker */
+.ticker{
+  margin-top:64px;border-top:1px dashed var(--line);padding-top:16px;
+  font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--muted);
+  white-space:nowrap;overflow:hidden;position:relative;
+}
+.ticker-track{display:inline-block;animation:scroll 26s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{margin-right:42px}
+.ticker-track b{color:var(--cobalt);font-weight:500}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.ticker-track{animation:none}}
+
+/* ---------- sections ---------- */
+section{padding:76px 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:36px;gap:16px;flex-wrap:wrap}
+h2{font-family:'Sora',sans-serif;font-weight:800;font-size:1.7rem;letter-spacing:-.01em}
+.sec-head .mono{font-size:.78rem;color:var(--muted)}
+
+/* project grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .35s ease;
+  position:relative;
+}
+.card:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 14px 30px var(--shadow);border-color:var(--cobalt)}
+.card:hover .card-arrow{opacity:1;transform:translate(0,0)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.card h3{font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:600}
+.card p{font-size:.92rem;color:var(--muted);flex:1}
+.card-arrow{
+  opacity:0;transform:translate(-4px,4px);transition:all .18s ease;
+  color:var(--cobalt);font-size:1.1rem;
+}
+.tags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;
+  background:var(--cobalt-soft);color:var(--cobalt);
+  padding:3px 10px;border-radius:6px;
+}
+.stars{
+  font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--muted);
+  margin-left:auto;display:flex;align-items:center;gap:4px;
+}
+.badge-live{
+  font-family:'IBM Plex Mono',monospace;font-size:.68rem;
+  color:var(--live-fg);background:var(--live-bg);padding:3px 9px;border-radius:6px;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.badge-live::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.8s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* featured card */
+.card.featured{grid-column:span 2;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.card.featured p{color:#A7ABB5}
+.card.featured .tag{background:rgba(255,255,255,.09);color:#9FB0FF}
+html[data-theme="dark"] .card.featured{background:#22262E;border-color:#2E3340}
+.card.featured:hover{border-color:var(--cobalt)}
+@media(max-width:700px){.card.featured{grid-column:span 1}}
+
+/* stagger for cards */
+.grid .card{transition-delay:0s}
+.grid .card.reveal{transition-property:opacity,transform}
+.grid .card.reveal:nth-child(1){transition-delay:.05s}
+.grid .card.reveal:nth-child(2){transition-delay:.12s}
+.grid .card.reveal:nth-child(3){transition-delay:.19s}
+.grid .card.reveal:nth-child(4){transition-delay:.26s}
+.grid .card.reveal:nth-child(5){transition-delay:.33s}
+.grid .card.reveal:nth-child(6){transition-delay:.4s}
+.grid .card.reveal:nth-child(7){transition-delay:.47s}
+
+/* ---------- about ---------- */
+.about{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .35s ease}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+.about p{color:var(--muted);margin-bottom:14px}
+.about p b{color:var(--ink);font-weight:500}
+.stat-box{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  font-family:'IBM Plex Mono',monospace;font-size:.85rem;
+}
+.stat-row{
+  display:flex;justify-content:space-between;padding:14px 18px;
+  border-bottom:1px solid var(--line);
+}
+.stat-row:last-child{border-bottom:none}
+.stat-row b{color:var(--cobalt);font-weight:500}
+
+/* ---------- footer ---------- */
+footer{padding:48px 0;color:var(--muted);font-size:.88rem}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot .mono{font-size:.75rem}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+
+
+/* ---------- icons ---------- */
+.icon{width:18px;height:18px;stroke-width:2;vertical-align:-3px}
+.card-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--cobalt-soft);color:var(--cobalt);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:4px;transition:transform .25s ease, background .25s ease;
+}
+.card-icon .icon{width:22px;height:22px}
+.card:hover .card-icon{transform:rotate(-8deg) scale(1.12)}
+.card.featured .card-icon{background:rgba(255,255,255,.1);color:#9FB0FF}
+.btn .icon{width:16px;height:16px}
+.sec-head h2{display:flex;align-items:center;gap:10px}
+.sec-head h2 .icon{color:var(--cobalt);width:24px;height:24px}
+.stat-row span{display:flex;align-items:center;gap:8px}
+.stat-row .icon{width:14px;height:14px;color:var(--muted)}
+
+/* ---------- confetti canvas ---------- */
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:999}
+</style>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#">risun<span>Code</span></a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+      <a class="gh" href="https://github.com/risunCode" target="_blank" rel="noopener"><i data-lucide="github" class="icon"></i> GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow reveal in">36 REPOS · 26 FOLLOWERS · EHEHHE</div>
+    <h1>
+      <span class="word" style="animation-delay:.05s">Tools</span>
+      <span class="word" style="animation-delay:.15s">that</span>
+      <span class="word" style="animation-delay:.25s">just</span>
+      <span class="word" style="animation-delay:.35s">work.</span>
+      <span class="word" style="animation-delay:.55s"><em>No BS.</em></span>
+    </h1>
+    <p class="sub">Hi, I'm Risun 👋 — I build small, sharp utilities: social media downloaders, Android power tools, browser extensions, and Windows tweaks. Free, fast, and easy to use.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projects"><i data-lucide="layout-grid" class="icon"></i>Browse projects</a>
+      <a class="btn btn-ghost" href="https://downaria.vercel.app/" target="_blank" rel="noopener"><i data-lucide="rocket" class="icon"></i>Try DownAria</a>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>alias: <b>risun</b></span><span>alias: <b>fracteo</b></span><span>alias: <b>tokio</b></span><span>alias: <b>takeo</b></span><span>alias: <b>aria</b></span><span>stack: <b>kotlin · typescript · svelte · js</b></span><span>motto: <b>no registration, no limits, no BS</b></span>
+        <span>alias: <b>risun</b></span><span>alias: <b>fracteo</b></span><span>alias: <b>tokio</b></span><span>alias: <b>takeo</b></span><span>alias: <b>aria</b></span><span>stack: <b>kotlin · typescript · svelte · js</b></span><span>motto: <b>no registration, no limits, no BS</b></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2><i data-lucide="folder-git-2" class="icon"></i>Projects</h2>
+      <span class="mono">// pinned & shipped</span>
+    </div>
+    <div class="grid">
+
+      <a class="card featured reveal" href="https://github.com/risunCode/AppControl-X" target="_blank" rel="noopener">
+        <div class="card-icon"><i data-lucide="smartphone" class="icon"></i></div>
+        <div class="card-top"><h3>AppControl-X</h3><span class="card-arrow"><i data-lucide="arrow-up-right" class="icon"></i></span></div>
+        <p>A powerful Android app for controlling app behavior, battery optimization, and system management — powered by Root or Shizuku.</p>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android</span><span class="tag">Root / Shizuku</span><span class="stars"><i data-lucide="star" class="icon" style="width:12px;height:12px"></i> 136</span></div>
+      </a>
+
+      <a class="card reveal" href="https://downaria.vercel.app/" target="_blank" rel="noopener">
+        <div class="card-icon"><i data-lucide="download" class="icon"></i></div>
+        <div class="card-top"><h3>DownAria</h3><span class="card-arrow"><i data-lucide="arrow-up-right" class="icon"></i></span></div>
+        <p>Free social media downloader for FB, IG, X, and TikTok. No registration, no limits. PWA-ready, with a Telegram bot too.</p>
+        <div class="tags"><span class="tag">TypeScript</span><span class="badge-live">live</span><span class="stars"><i data-lucide="star" class="icon" style="width:12px;height:12px"></i> 8</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/risunCode/SurfManager" target="_blank" rel="noopener">
+        <div class="card-icon"><i data-lucide="database-backup" class="icon"></i></div>
+        <div class="card-top"><h3>SurfManager</h3><span class="card-arrow"><i data-lucide="arrow-up-right" class="icon"></i></span></div>
+        <p>Reset IDE data, create backup & restore, and manage multi-account easily. Works with VS Code and fork-based editors.</p>
+        <div class="tags"><span class="tag">Svelte</span><span class="tag">Desktop</span><span class="stars"><i data-lucide="star" class="icon" style="width:12px;height:12px"></i> 33</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/risunCode/SesWi-Session-Manager" target="_blank" rel="noopener">
+        <div class="card-icon"><i data-lucide="cookie" class="icon"></i></div>
+        <div class="card-top"><h3>SesWi Session Manager</h3><span class="card-arrow"><i data-lucide="arrow-up-right" class="icon"></i></span></div>
+        <p>Chrome extension to manage cookies & sessions securely — Netscape export, raw JSON, and encrypted save.</p>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">Extension</span><span class="stars"><i data-lucide="star" class="icon" style="width:12px;height:12px"></i> 15</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/risunCode/WinPortal" target="_blank" rel="noopener">
+        <div class="card-icon"><i data-lucide="app-window" class="icon"></i></div>
+        <div class="card-top"><h3>WinPortal</h3><span class="card-arrow"><i data-lucide="arrow-up-right" class="icon"></i></span></div>
+        <p>Windows tips & tricks collection — useful software and scripts for your compiyutah! 🖥️</p>
+        <div class="tags"><span class="tag">Windows</span><span class="tag">Scripts</span></div>
+      </a>
+
+      <a class="card reveal" href="https://risuncode.github.io/MailGan/" target="_blank" rel="noopener">
+        <div class="card-icon"><i data-lucide="mail" class="icon"></i></div>
+        <div class="card-top"><h3>MailGan</h3><span class="card-arrow"><i data-lucide="arrow-up-right" class="icon"></i></span></div>
+        <p>Simple email alias service — quick throwaway addresses when you need them.</p>
+        <div class="tags"><span class="tag">Web</span><span class="badge-live">live</span></div>
+      </a>
+
+      <a class="card reveal" href="https://fetchtiumv2.vercel.app/" target="_blank" rel="noopener">
+        <div class="card-icon"><i data-lucide="cloud-download" class="icon"></i></div>
+        <div class="card-top"><h3>Fetchtium v2</h3><span class="card-arrow"><i data-lucide="arrow-up-right" class="icon"></i></span></div>
+        <p>Alternate social media downloader, built with Next.js.</p>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="stars"><i data-lucide="star" class="icon" style="width:12px;height:12px"></i> 2</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal-left">
+      <h2 style="margin-bottom:20px"><i data-lucide="user-round" class="icon"></i>About</h2>
+      <p>I like building <b>practical tools</b> — the kind you open, use, and get on with your day. Most of my projects come from problems I personally hit: downloading media without ad-mazes, taming Android battery drain, or juggling sessions across accounts.</p>
+      <p>Currently exploring <b>AI tooling</b> and chatbot systems, and shipping under the <b>risunCode</b> brand. If something here is useful to you, a star is always appreciated ⭐</p>
+    </div>
+    <div class="stat-box reveal" aria-label="GitHub stats">
+      <div class="stat-row"><span><i data-lucide="folder-code" class="icon"></i>public repos</span><b data-count="36">0</b></div>
+      <div class="stat-row"><span><i data-lucide="users" class="icon"></i>followers</span><b data-count="26">0</b></div>
+      <div class="stat-row"><span><i data-lucide="star" class="icon"></i>top project stars</span><b data-count="136">0</b></div>
+      <div class="stat-row"><span><i data-lucide="trophy" class="icon"></i>achievements</span><b>Starstruck ×2 · Pull Shark · YOLO</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot reveal">
+    <span>© 2026 risunCode — built with plain HTML & CSS, no BS.</span>
+    <span class="mono"><i data-lucide="terminal" class="icon" style="width:14px;height:14px"></i> github.com/risunCode</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- theme toggle ---------- */
+  const btn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  let theme = 'light';
+  try { theme = localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch(e){}
+  apply(theme);
+  btn.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; apply(theme);
+    try{ localStorage.setItem('theme', theme); }catch(e){} });
+  function apply(t){ root.setAttribute('data-theme', t); btn.textContent = t === 'dark' ? '☀️' : '🌙'; }
+
+  /* ---------- scroll reveal ---------- */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-left').forEach(el => io.observe(el));
+
+  /* ---------- count-up stats ---------- */
+  const counters = document.querySelectorAll('[data-count]');
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.count, dur = 1200, t0 = performance.now();
+      if (reduced) { el.textContent = target; cio.unobserve(el); return; }
+      (function tick(now){
+        const p = Math.min((now - t0) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      })(t0);
+      cio.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => cio.observe(el));
+
+  /* ---------- confetti on first visit ---------- */
+  let seen = false;
+  try { seen = sessionStorage.getItem('confettiSeen') === '1'; } catch(e){}
+  if (!seen && !reduced) {
+    try{ sessionStorage.setItem('confettiSeen','1'); }catch(e){}
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    const DPR = Math.min(window.devicePixelRatio || 1, 2);
+    function size(){ canvas.width = innerWidth*DPR; canvas.height = innerHeight*DPR; }
+    size(); addEventListener('resize', size);
+    const colors = ['#2B4EFF','#FFC533','#FF6B6B','#4ADE80','#9FB0FF','#F472B6'];
+    const N = 160, parts = [];
+    for (let i = 0; i < N; i++) {
+      parts.push({
+        x: Math.random()*innerWidth,
+        y: -20 - Math.random()*innerHeight*0.5,
+        w: 6+Math.random()*6, h: 8+Math.random()*8,
+        vy: 2+Math.random()*3.5, vx: -1.5+Math.random()*3,
+        rot: Math.random()*Math.PI, vr: -0.15+Math.random()*0.3,
+        color: colors[(Math.random()*colors.length)|0],
+        sway: Math.random()*Math.PI*2
+      });
+    }
+    const t0 = performance.now(), DURATION = 4200;
+    (function frame(now){
+      const elapsed = now - t0;
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.save(); ctx.scale(DPR,DPR);
+      const fade = elapsed > DURATION-800 ? Math.max(0,(DURATION-elapsed)/800) : 1;
+      ctx.globalAlpha = fade;
+      for (const p of parts) {
+        p.y += p.vy; p.x += p.vx + Math.sin((elapsed/400)+p.sway)*0.6; p.rot += p.vr;
+        if (p.y > innerHeight+20) { p.y = -20; p.x = Math.random()*innerWidth; }
+        ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.color; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+        ctx.restore();
+      }
+      ctx.restore();
+      if (elapsed < DURATION) requestAnimationFrame(frame);
+      else { ctx.clearRect(0,0,canvas.width,canvas.height); canvas.remove(); }
+    })(t0);
+  } else {
+    document.getElementById('confetti').remove();
+  }
+
+  /* ---------- render lucide icons ---------- */
+  if (window.lucide) lucide.createIcons();
+})();
+</script>
+</body>
+</html>
